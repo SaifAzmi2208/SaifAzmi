@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Warung Pedia</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Warung Pedia</h1>
+
+  <div id="product-list">
+    <h2>Daftar Produk</h2>
+    <ul>
+      <li>Bola Basket <button onclick="addToCart('Bola Basket')">Tambahkan ke Keranjang</button></li>
+      <li>Bola Sepak <button onclick="addToCart('Bola Sepak')">Tambahkan ke Keranjang</button></li>
+      <li>Bola Bowling <button onclick="addToCart('Bola Bowling')">Tambahkan ke Keranjang</button></li>
+    </ul>
+  </div>
+
+  <div id="cart">
+    <h2>Keranjang</h2>
+    <ul id="cart-items"></ul>
+    <button onclick="checkout()">Checkout</button>
+  </div>
+
+  <div id="checkout">
+    <h2>Checkout</h2>
+    <form>
+      <label for="name">Nama:</label>
+      <input type="text" id="name" required><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required><br>
+
+      <label for="address">Alamat:</label>
+      <textarea id="address" required></textarea><br>
+
+      <button onclick="confirmOrder()">Konfirmasi Pesanan</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
